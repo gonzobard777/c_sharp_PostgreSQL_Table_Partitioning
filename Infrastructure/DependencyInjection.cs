@@ -1,4 +1,5 @@
 ﻿using Domain.Contract;
+using Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Infrastructure;
@@ -9,6 +10,7 @@ public static class DependencyInjection
     {
         services.AddDbContext<MyDbContext>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IPuansonRepository, PuansonRepository>();
 
         return services;
     }

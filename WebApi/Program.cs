@@ -1,3 +1,7 @@
+using Domain;
+using Infrastructure;
+using Microsoft.EntityFrameworkCore;
+
 namespace WebApi;
 
 public class Program
@@ -8,8 +12,18 @@ public class Program
 
         // Add services to the container.
 
-        builder.Services.AddControllers();
+        builder.Services.AddDbContext<MyDbContext>(options =>
+            options.UseNpgsql(
+                builder.Configuration.GetConnectionString("PostgreSQL")
+            )
+        );
+        
 
+        builder.Services.AddDomainDependencies();
+        builder.Services.AddInfrastructureDependencies();
+
+        builder.Services.AddControllers();
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.

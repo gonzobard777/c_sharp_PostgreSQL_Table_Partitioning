@@ -1,0 +1,10 @@
+services:
+  db_postgres:
+    container_name: db_postgres_entity_relationships_OneToMany
+    image: postgres:16.4-alpine
+    ports:
+      - "5443:5432"
+    environment:
+      - POSTGRES_DB=db
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=12345

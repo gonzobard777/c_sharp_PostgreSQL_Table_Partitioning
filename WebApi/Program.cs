@@ -14,7 +14,7 @@ public class Program
 
         builder.Services.AddDbContext<MyDbContext>(options =>
             options
-                // .EnableSensitiveDataLogging() 
+                .EnableSensitiveDataLogging() 
                 .UseNpgsql(
                 builder.Configuration.GetConnectionString("PostgreSQL")
             )

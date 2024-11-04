@@ -13,7 +13,9 @@ public class Program
         // Add services to the container.
 
         builder.Services.AddDbContext<MyDbContext>(options =>
-            options.UseNpgsql(
+            options
+                // .EnableSensitiveDataLogging() 
+                .UseNpgsql(
                 builder.Configuration.GetConnectionString("PostgreSQL")
             )
         );

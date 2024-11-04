@@ -5,11 +5,11 @@ public class ListQueryParams
     /*
      * Фильтрация
      */
-    public string? Search { get; set; }
-    public int? CompanyId { get; set; }
-    public int? LicenseId { get; set; }
-    public int? WorkplaceId { get; set; }
-    public int? WorkScheduleId { get; set; }
+    // public string? Search { get; set; }
+    // public int? CompanyId { get; set; }
+    // public int? LicenseId { get; set; }
+    // public int? WorkplaceId { get; set; }
+    // public int? WorkScheduleId { get; set; }
 
     /*
      * Сортировка

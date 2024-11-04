@@ -8,7 +8,7 @@ namespace Domain.Services;
 public class BaseService<T> : IBaseService<T> where T : class
 {
     protected IUnitOfWork UnitOfWork { get; }
-    protected IBaseRepository<T> Repository { get; }
+    public IBaseRepository<T> Repository { get; }
 
     protected BaseService(IBaseRepository<T> repository, IUnitOfWork unitOfWork)
     {

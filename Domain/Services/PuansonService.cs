@@ -5,7 +5,7 @@ namespace Domain.Services;
 
 public class PuansonService : BaseService<Puanson>, IPuansonService
 {
-    public PuansonService(IBaseRepository<Puanson> repository, IUnitOfWork unitOfWork)
+    public PuansonService(IPuansonRepository repository, IUnitOfWork unitOfWork)
         : base(repository, unitOfWork)
     {
     }

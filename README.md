@@ -1,5 +1,10 @@
 # PostgreSQL. Table Partitioning
 
+Последовательность действий см. в документе:  
+[PostgreSQL. Партиционирование](https://docs.google.com/document/d/1jcsEVPz0JmIzCvT_vygfbcPBz7Iyow78mE5Wj8Gx378/edit?usp=sharing)
+
+Доп. источники:
+
 - [5.11. Секционирование таблиц](https://postgrespro.ru/docs/postgresql/16/ddl-partitioning)
 - [npgsql / efcore.pg. Support for table partitioning #1035 (Open from 2019)](https://github.com/npgsql/efcore.pg/issues/1035)
 

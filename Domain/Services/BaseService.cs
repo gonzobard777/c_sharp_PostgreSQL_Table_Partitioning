@@ -67,11 +67,11 @@ public class BaseService<T> : IBaseService<T> where T : class
         listQuery = Paginate(listQuery, queryParams.Skip, queryParams.Take);
 
         var list = await listQuery.ToListAsync();
-        var total = await filteredQuery.CountAsync();
+        // var total = await filteredQuery.CountAsync();
 
         list = ListProcessing(list); // дополнительная обработка списка 
 
-        return new PagedResult<T>(list, total);
+        return new PagedResult<T>(list, 0);
     }
 
 

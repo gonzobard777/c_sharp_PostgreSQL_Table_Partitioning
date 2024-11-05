@@ -70,8 +70,8 @@ public class PuansonController : ControllerBase
         [FromQuery] ListQueryParams queryParams
     )
     {
-        if (queryParams.FromDate != null)
-            Console.WriteLine($@"list{((DateTime)queryParams.FromDate).ToUniversalTime()}");
+        // if (queryParams.FromDate != null)
+            // Console.WriteLine($@"list{((DateTime)queryParams.FromDate).ToUniversalTime()}");
        
         return await Service.List(queryParams);
     }

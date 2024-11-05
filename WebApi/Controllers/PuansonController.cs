@@ -67,10 +67,12 @@ public class PuansonController : ControllerBase
 
     [HttpGet]
     public async Task<PagedResult<Puanson>> List(
-        [ModelBinder(BinderType = typeof(ListQueryParamsBinder), Name = "ListQueryParams")]
-        ListQueryParams queryParams
+        [FromQuery] ListQueryParams queryParams
     )
     {
+        if (queryParams.FromDate != null)
+            Console.WriteLine($@"list{((DateTime)queryParams.FromDate).ToUniversalTime()}");
+       
         return await Service.List(queryParams);
     }
 

@@ -10,6 +10,12 @@ public class ListQueryParams
     // public int? LicenseId { get; set; }
     // public int? WorkplaceId { get; set; }
     // public int? WorkScheduleId { get; set; }
+    
+    public List<int>? StationIds { get; set; }
+    
+    public DateTime? FromDate { get; set; }
+    public DateTime? ToDate { get; set; }
+    
 
     /*
      * Сортировка
